@@ -41,6 +41,7 @@ tdm = TermDocumentMatrix(mach_corpus,control = list(removePunctuation = TRUE, st
 
 m = as.matrix(tdm)
 word_freq=sort(rowSums(),decreasing = TRUE)
+dm=data.frame(word=names(word_freq),freq=word_freq)
 
 ##if margins are less
 
